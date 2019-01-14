@@ -36,12 +36,12 @@ String representation, like toString in Scala
 ## __bool__
 If `__bool__` is not implemented, `len()` will be invoked for an object. If its result is 0, then `bool(0)` will return `False`. `True` otherwise.
 
-## __add__ , __mul__ , __abs__
+## __add__ , __mul__ , __abs__ ...
 
 # List comprehension and generator expressions
-line breaks are ignored inside pairs of `[], {} or ()`, so you can build multi-line listcomps and genexps without using the ugly `\` line continuation escape.
+Line breaks are ignored inside pairs of `[], {} or ()`, so you can build multi-line listcomps and genexps without using the ugly `\` line continuation escape.
 
-These expressions have their own local scope, like functions.
+These expressions have their own local scope like functions.
 
 |   | Pros | Cons|
 --- | --- | ---
