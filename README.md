@@ -5,7 +5,9 @@ ClassName = collection.namedtuple('ClassName', [attr1, attr2, ...])
 
 ## len()
 The implementation of `__len__(self)` 
-	
+
+**Note that len() for built-in types is super fast. Because there is no method call, it will read the value from the CPython's field.**
+
 	len(ClassName)
 
 ## iteration and slicing
@@ -36,4 +38,11 @@ If `__bool__` is not implemented, `len()` will be invoked for an object. If its 
 
 ## __add__ , __mul__ , __abs__
 
+# List comprehension and generator expressions
+line breaks are ignored inside pairs of `[], {} or ()`, so you can build multi-line listcomps and genexps without using the ugly `\` line continuation escape.
 
+These expressions have their own local scope, like functions.
+
+| Type | Pros | Cons|
+| listcomp | objects are stored for late use | create each object in memory |
+| genexps | yield items one by one using the iterator protocol. Especially for huge cartesian product | items are not stored |
