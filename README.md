@@ -27,4 +27,13 @@ Define the key function to return the rank value. Note that the key in `dict()` 
 		print(rank_index)
 		return rank_index * len(suit_values) + suit_values[card.suit]
 
+# Special methods (speical due to they are invoked by Python interpret.)
+## __repr__
+String representation, like toString in Scala
+
+## __bool__
+If `__bool__` is not implemented, `len()` will be invoked for an object. If its result is 0, then `bool(0)` will return `False`. `True` otherwise.
+
+## __add__ , __mul__ , __abs__
+
 
