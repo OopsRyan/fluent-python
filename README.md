@@ -43,6 +43,7 @@ line breaks are ignored inside pairs of `[], {} or ()`, so you can build multi-l
 
 These expressions have their own local scope, like functions.
 
-| Type | Pros | Cons|
+|   | Pros | Cons|
+--- | --- | ---
 | listcomp | objects are stored for late use | create each object in memory |
 | genexps | yield items one by one using the iterator protocol. Especially for huge cartesian product | items are not stored |
